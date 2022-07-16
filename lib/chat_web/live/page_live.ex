@@ -8,7 +8,7 @@ defmodule ChatWeb.Live.PageLive do
   end
 
   @impl true
-  def handle_event("random", _params, socket) do
-    {:noreply, push_redirect(socket, to: "/phoenix-in-action-chat")}
+  def handle_event("username", %{"in" => %{"username" => username}}, socket) do
+    {:noreply, push_redirect(socket, to: "/private-chat-from-zhandos/" <> username)}
   end
 end

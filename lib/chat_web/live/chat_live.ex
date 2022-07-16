@@ -3,9 +3,9 @@ defmodule ChatWeb.Live.ChatLive do
   require Logger
 
   @impl true
-  def mount(%{"id" => room}, _session, socket) do
+  def mount(%{"username" => username}, _session, socket) do
+    room = "private-chat-from-zhandos"
     topic = "room: " <> room
-    username = MnemonicSlugs.generate_slug(2)
     if connected?(socket) do
       ChatWeb.Endpoint.subscribe(topic)
       ChatWeb.Presence.track(self(), topic, username, %{})

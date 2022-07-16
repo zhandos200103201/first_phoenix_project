@@ -1,2 +1,4 @@
-<button phx-click="random">Enter a chat room</button>
-
+<.form let={f} for={:in} id="form" phx-submit="username">
+    <%= text_input f, :username, id: "username", placeholder: "Enter a username" %>
+    <%= submit "Enter a private room", class: "btn" %>
+</.form>

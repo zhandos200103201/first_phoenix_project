@@ -19,7 +19,7 @@
     </div>
 </div>
 <.form let={f} for={:chat} id="form" phx-submit="new_message" phx-change="form_updated">
-    <%= text_input f, :message, id: "msg", placeholder: "smth", phx_value: "#{@message}" %>
+    <%= text_input f, :message, id: "msg", placeholder: "Enter a message", phx_value: "#{@message}" %>
     <%= submit "Send"%>
 </.form>
 

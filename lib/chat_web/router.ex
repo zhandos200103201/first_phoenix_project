@@ -18,7 +18,7 @@ defmodule ChatWeb.Router do
     pipe_through :browser
 
     live "/", Live.PageLive, :index
-    live "/:id", Live.ChatLive, :index
+    live "/private-chat-from-zhandos/:username", Live.ChatLive, :index
   end
 
   # Other scopes may use custom stacks.
